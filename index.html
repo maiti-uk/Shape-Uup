@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Shape Uup | Utpaal Kumaar Maaiti — Premier Consultancy, West Bengal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap"/>
+<style>
+/* ════════════════════════════════════════════════
+   COLOUR SYSTEM — Edit :root to retheme the site
+   ════════════════════════════════════════════════ */
+:root {
+  /* ─── Deep Navy (primary dark) ─── */
+  --navy:     #0b1220;
+  --navy2:    #111c2f;
+  --navy3:    #192540;
+
+  /* ─── Emerald Green (brand signature) ─── */
+  --em:       #1a6b42;
+  --em2:      #228550;
+  --em3:      #2ea864;
+  --em-lt:    #4ecf85;
+  --em-pale:  #d1f5e2;
+
+  /* ─── Amber / Gold (premium warmth) ─── */
+  --amb:      #c07c28;
+  --amb2:     #e09a3a;
+  --amb3:     #f5b848;
+  --amb-lt:   #fde8b5;
+
+  /* ─── Burgundy / Crimson (power accent) ─── */
+  --bur:      #7a1c2e;
+  --bur2:     #a02540;
+  --bur3:     #c9405a;
+
+  /* ─── Teal (cool accent) ─── */
+  --tl:       #0f6b78;
+  --tl2:      #1a8a9a;
+  --tl3:      #22b0c4;
+
+  /* ─── Ivory & Warm Whites (light sections) ─── */
+  --iv1:      #faf6ef;
+  --iv2:      #f3ece0;
+  --iv3:      #e8dece;
+
+  /* ─── Text ─── */
+  --td:       #eef2f8;
+  --tm:       #7a90a8;
+  --ts:       #4a6070;
+  --tl-dark:  #0e1a12;
+  --tl-mid:   #3a5240;
+
+  /* ─── Platinum ─── */
+  --plat:     #c0b4a0;
+
+  /* ─── Fonts ─── */
+  --f-head:   'Playfair Display', Georgia, serif;
+  --f-num:    'Cormorant Garamond', serif;
+  --f-body:   'Lora', Georgia, serif;
+  --f-ui:     'DM Sans', system-ui, sans-serif;
+
+  /* ─── Motion ─── */
+  --ease:     cubic-bezier(.4,0,.2,1);
+  --expo:     cubic-bezier(.16,1,.3,1);
+  --spring:   cubic-bezier(.34,1.56,.64,1);
+}
+
+/* ════════════════════════════════════════════════
+   RESET
+   ════════════════════════════════════════════════ */
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; font-size:16px }
+body { font-family:var(--f-body); background:var(--navy); color:var(--td); overflow-x:hidden; line-height:1.7 }
+img  { max-width:100%; display:block }
+a    { text-decoration:none; color:inherit }
+ul   { list-style:none }
+::selection { background:var(--em); color:#fff }
+::-webkit-scrollbar { width:4px }
+::-webkit-scrollbar-track { background:var(--navy) }
+::-webkit-scrollbar-thumb { background:var(--em); border-radius:2px }
+
+/* ════════════════════════════════════════════════
+   TYPOGRAPHY
+   ════════════════════════════════════════════════ */
+.f-head { font-family:var(--f-head) }
+.f-num  { font-family:var(--f-num); font-weight:300; letter-spacing:-.04em; line-height:1 }
+.f-body { font-family:var(--f-body) }
+.f-ui   { font-family:var(--f-ui) }
+
+.eyebrow {
+  font-family:var(--f-ui); font-size:.67rem; font-weight:600;
+  letter-spacing:.25em; text-transform:uppercase;
+  display:flex; align-items:center; gap:14px; margin-bottom:16px;
+  color:var(--amb2);
+}
+.eyebrow::before { content:''; width:28px; height:1.5px; background:var(--amb); flex-shrink:0 }
+.eyebrow-em  { color:var(--em3) }
+.eyebrow-em::before  { background:var(--em2) }
+.eyebrow-tl  { color:var(--tl3) }
+.eyebrow-tl::before  { background:var(--tl2) }
+.eyebrow-bur { color:var(--bur3) }
+.eyebrow-bur::before { background:var(--bur2) }
+.eyebrow-c   { justify-content:center }
+.eyebrow-c::before { display:none }
+
+/* ════════════════════════════════════════════════
+   LAYOUT
+   ════════════════════════════════════════════════ */
+.wrap { max-width:1240px; margin:0 auto; padding:0 40px }
+.sec  { padding:120px 0 }
+
+/* Accent rule */
+.rule { width:48px; height:2.5px; margin:0 0 26px; border-radius:2px }
+.rule-amb { background:linear-gradient(90deg,var(--amb),var(--amb3)) }
+.rule-em  { background:linear-gradient(90deg,var(--em),var(--em3)) }
+.rule-tl  { background:linear-gradient(90deg,var(--tl),var(--tl3)) }
+.rule-bur { background:linear-gradient(90deg,var(--bur),var(--bur3)) }
+
+/* ════════════════════════════════════════════════
+   BUTTONS
+   ════════════════════════════════════════════════ */
+.btn {
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--f-ui); font-size:.77rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase;
+  cursor:pointer; border:none; position:relative; overflow:hidden;
+  transition:all .38s var(--expo);
+}
+.btn-shine::after {
+  content:''; position:absolute; top:0; left:-110%; width:100%; height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);
+  transition:left .5s var(--ease);
+}
+.btn-shine:hover::after { left:110% }
+
+.btn-amb  { background:var(--amb); color:#fff; padding:17px 40px; box-shadow:0 4px 28px rgba(192,124,40,.45) }
+.btn-amb:hover  { background:var(--amb2); transform:translateY(-3px); box-shadow:0 14px 44px rgba(192,124,40,.55) }
+
+.btn-em   { background:var(--em); color:#fff; padding:17px 40px; box-shadow:0 4px 28px rgba(26,107,66,.4) }
+.btn-em:hover   { background:var(--em2); transform:translateY(-3px); box-shadow:0 14px 44px rgba(26,107,66,.5) }
+
+.btn-tl   { background:var(--tl); color:#fff; padding:17px 40px; box-shadow:0 4px 28px rgba(15,107,120,.4) }
+.btn-tl:hover   { background:var(--tl2); transform:translateY(-3px) }
+
+.btn-bur  { background:var(--bur); color:#fff; padding:17px 40px; box-shadow:0 4px 28px rgba(122,28,46,.4) }
+.btn-bur:hover  { background:var(--bur2); transform:translateY(-3px) }
+
+.btn-ghost-lt { background:transparent; color:var(--td); padding:16px 38px; border:1px solid rgba(255,255,255,.2) }
+.btn-ghost-lt:hover { border-color:rgba(255,255,255,.5); transform:translateY(-3px) }
+
+.btn-ghost-dk { background:transparent; color:var(--navy); padding:16px 38px; border:1.5px solid var(--navy) }
+.btn-ghost-dk:hover { background:var(--navy); color:#fff; transform:translateY(-2px) }
+
+.btn-ghost-em { background:transparent; color:var(--em2); padding:16px 38px; border:1.5px solid var(--em) }
+.btn-ghost-em:hover { background:var(--em); color:#fff; transform:translateY(-2px) }
+
+.btn-arr { transition:transform .32s var(--expo) }
+.btn:hover .btn-arr { transform:translateX(6px) }
+
+/* ════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS — 24 total
+   ════════════════════════════════════════════════ */
+@keyframes fadeUp  { from { opacity:0; transform:translateY(52px) } to { opacity:1; transform:translateY(0) } }
+@keyframes fadeIn  { from { opacity:0 } to { opacity:1 } }
+@keyframes scaleIn { from { opacity:0; transform:scale(.88) } to { opacity:1; transform:scale(1) } }
+@keyframes slideLeft  { from { opacity:0; transform:translateX(-48px) } to { opacity:1; transform:translateX(0) } }
+@keyframes slideRight { from { opacity:0; transform:translateX(48px) }  to { opacity:1; transform:translateX(0) } }
+
+@keyframes shimmerAmb {
+  0%   { background-position:-600px 0 }
+  100% { background-position: 600px 0 }
+}
+@keyframes shimmerEm {
+  0%   { background-position:-600px 0 }
+  100% { background-position: 600px 0 }
+}
+@keyframes shimmerTl {
+  0%   { background-position:-600px 0 }
+  100% { background-position: 600px 0 }
+}
+
+@keyframes drift {
+  0%,100% { transform:translateY(0) rotate(.3deg) }
+  42%      { transform:translateY(-16px) rotate(-.4deg) }
+  70%      { transform:translateY(-8px) rotate(.2deg) }
+}
+@keyframes spinCW  { to { transform:rotate(360deg) } }
+@keyframes spinCCW { to { transform:rotate(-360deg) } }
+
+@keyframes glowAmb {
+  0%,100% { opacity:.15; transform:scale(1) }
+  50%      { opacity:.28; transform:scale(1.06) }
+}
+@keyframes glowEm {
+  0%,100% { opacity:.12 }
+  50%      { opacity:.24 }
+}
+@keyframes glowTl {
+  0%,100% { opacity:.1 }
+  50%      { opacity:.2 }
+}
+
+@keyframes waPulse {
+  0%,100% { box-shadow:0 0 0 0 rgba(37,211,102,.6) }
+  60%      { box-shadow:0 0 0 18px rgba(37,211,102,0) }
+}
+
+@keyframes marquee { 0% { transform:translateX(0) } 100% { transform:translateX(-50%) } }
+
+@keyframes ptFloat {
+  0%   { opacity:0; transform:translateY(0) scale(.5) }
+  15%  { opacity:.9 }
+  85%  { opacity:.7 }
+  100% { opacity:0; transform:translateY(-160px) translateX(20px) scale(1) }
+}
+@keyframes ptFloatB {
+  0%   { opacity:0; transform:translateY(0) scale(.4) }
+  12%  { opacity:.8 }
+  88%  { opacity:.6 }
+  100% { opacity:0; transform:translateY(-130px) translateX(-25px) scale(1) }
+}
+
+@keyframes meshBreathe {
+  0%,100% { background-position:0% 50% }
+  50%      { background-position:100% 50% }
+}
+
+@keyframes countUp {
+  from { opacity:0; transform:translateY(18px) }
+  to   { opacity:1; transform:translateY(0) }
+}
+
+@keyframes lineGrow {
+  from { transform:scaleX(0); transform-origin:left }
+  to   { transform:scaleX(1); transform-origin:left }
+}
+
+@keyframes blinkDot {
+  0%,100% { opacity:1 }
+  50%      { opacity:.25 }
+}
+
+@keyframes rotateGrad {
+  to { filter:hue-rotate(30deg) }
+}
+
+/* Page-load helpers */
+.fu  { animation:fadeUp .95s var(--expo) both }
+.fi  { animation:fadeIn .95s var(--ease) both }
+.si  { animation:scaleIn .9s var(--spring) both }
+.d0  { animation-delay:0s }
+.d1  { animation-delay:.15s }
+.d2  { animation-delay:.3s }
+.d3  { animation-delay:.45s }
+.d4  { animation-delay:.6s }
+.d5  { animation-delay:.75s }
+
+/* Scroll-reveal */
+.sr  { opacity:0; transform:translateY(38px);  transition:opacity .9s var(--expo),transform .9s var(--expo) }
+.sl  { opacity:0; transform:translateX(-38px); transition:opacity .9s var(--expo),transform .9s var(--expo) }
+.sr2 { opacity:0; transform:translateX(38px);  transition:opacity .9s var(--expo),transform .9s var(--expo) }
+.sc  { opacity:0; transform:scale(.92);        transition:opacity .9s var(--expo),transform .9s var(--expo) }
+.sr.on,.sl.on,.sr2.on,.sc.on { opacity:1; transform:none }
+
+/* Stagger children */
+.sg > *:nth-child(1) { transition-delay:0s }
+.sg > *:nth-child(2) { transition-delay:.13s }
+.sg > *:nth-child(3) { transition-delay:.26s }
+.sg > *:nth-child(4) { transition-delay:.39s }
+
+/* Shimmer text helpers */
+.sh-amb {
+  background:linear-gradient(90deg,var(--amb),var(--amb3),var(--plat),var(--amb));
+  background-size:300% 100%;
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  animation:shimmerAmb 5s linear infinite;
+}
+.sh-em {
+  background:linear-gradient(90deg,var(--em3),var(--em-lt),var(--em-pale),var(--em3));
+  background-size:300% 100%;
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  animation:shimmerEm 4s linear infinite;
+}
+.sh-tl {
+  background:linear-gradient(90deg,var(--tl2),var(--tl3),#7de8f5,var(--tl2));
+  background-size:300% 100%;
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  animation:shimmerTl 4.5s linear infinite;
+}
+
+/* ════════════════════════════════════════════════
+   NOISE TEXTURE
+   ════════════════════════════════════════════════ */
+.noise {
+  position:fixed; inset:0; z-index:9997; pointer-events:none; opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:256px;
+}
+
+/* ════════════════════════════════════════════════
+   CUSTOM CURSOR
+   ════════════════════════════════════════════════ */
+.c-d {
+  position:fixed; top:0; left:0; width:7px; height:7px; border-radius:50%;
+  background:var(--amb3); pointer-events:none; z-index:99999;
+  transform:translate(-50%,-50%); transition:width .28s,height .28s,background .28s;
+}
+.c-r {
+  position:fixed; top:0; left:0; width:38px; height:38px; border-radius:50%;
+  border:1px solid rgba(224,154,58,.38); pointer-events:none; z-index:99998;
+  transform:translate(-50%,-50%); transition:width .35s var(--ease),height .35s var(--ease),border-color .3s;
+}
+.c-d.big { width:12px; height:12px; background:var(--em3) }
+.c-r.big { width:58px; height:58px; border-color:rgba(46,168,100,.4) }
+
+/* ════════════════════════════════════════════════
+   NAVIGATION
+   ════════════════════════════════════════════════ */
+#nav {
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  padding:0 52px; height:80px;
+  display:flex; align-items:center; justify-content:space-between;
+  transition:all .45s var(--ease);
+}
+#nav.scrolled {
+  background:rgba(11,18,32,.94);
+  backdrop-filter:blur(24px) saturate(140%);
+  border-bottom:1px solid rgba(224,154,58,.12);
+  box-shadow:0 8px 48px rgba(0,0,0,.5);
+  height:68px;
+}
+.n-brand { display:flex; align-items:center; gap:14px }
+.n-logo  { width:46px; height:46px; object-fit:contain; border-radius:8px }
+.n-name  { font-family:var(--f-head); font-size:1.5rem; font-weight:700; color:var(--td); letter-spacing:-.01em; line-height:1 }
+.n-tag   { font-family:var(--f-ui); font-size:.57rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--amb2); margin-top:3px }
+.n-links { display:flex; gap:0 }
+.n-links a {
+  padding:10px 16px; font-family:var(--f-ui); font-size:.74rem; font-weight:500;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--ts);
+  position:relative; transition:color .28s;
+}
+.n-links a::after {
+  content:''; position:absolute; bottom:5px; left:16px; right:16px;
+  height:1.5px; background:var(--amb3);
+  transform:scaleX(0); transform-origin:center;
+  transition:transform .35s var(--expo);
+}
+.n-links a:hover,.n-links a.active { color:var(--td) }
+.n-links a:hover::after,.n-links a.active::after { transform:scaleX(1) }
+.n-cta {
+  display:flex; align-items:center; gap:8px;
+  background:var(--amb); color:#fff; padding:9px 20px;
+  font-family:var(--f-ui); font-size:.72rem; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase;
+  transition:all .3s;
+}
+.n-cta:hover { background:var(--amb2); transform:translateY(-1px) }
+.hamburger {
+  display:none; flex-direction:column; gap:6px; cursor:pointer; padding:5px;
+}
+.hamburger span { display:block; width:25px; height:1.5px; background:var(--ts); border-radius:2px; transition:all .35s }
+.hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px) }
+.hamburger.open span:nth-child(2) { opacity:0; transform:translateX(-10px) }
+.hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px) }
+.mob-nav {
+  display:none; position:fixed; top:68px; inset-x:0; z-index:999;
+  background:rgba(11,18,32,.97); backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(224,154,58,.1);
+  flex-direction:column; padding:18px 32px 28px;
+}
+.mob-nav.open { display:flex }
+.mob-nav a { padding:14px 0; border-bottom:1px solid rgba(255,255,255,.05); font-family:var(--f-ui); font-size:.82rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--ts); transition:color .25s }
+.mob-nav a:hover { color:var(--amb2) }
+.mob-cta-m { margin-top:16px!important; padding:15px 0!important; background:var(--amb)!important; color:#fff!important; text-align:center; border:none!important; font-weight:700!important }
+
+/* ════════════════════════════════════════════════
+   HERO — Multi-color gradient + navy base
+   ════════════════════════════════════════════════ */
+#home {
+  min-height:100vh; background:var(--navy);
+  display:flex; align-items:center;
+  padding:80px 52px 0;
+  position:relative; overflow:hidden;
+}
+/* Rich multi-color mesh */
+.h-mesh {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 65% at 70% 35%, rgba(26,107,66,.25) 0%,transparent 55%),
+    radial-gradient(ellipse 45% 55% at 15% 80%, rgba(15,107,120,.2) 0%,transparent 50%),
+    radial-gradient(ellipse 35% 45% at 85% 80%, rgba(192,124,40,.12) 0%,transparent 50%),
+    radial-gradient(ellipse 25% 35% at 5% 15%,  rgba(122,28,46,.12) 0%,transparent 45%);
+  background-size:200% 200%;
+  animation:meshBreathe 16s ease infinite;
+}
+/* Grid overlay */
+.h-grid {
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:80px 80px;
+}
+/* Decorative rings — different colors */
+.h-ring {
+  position:absolute; border-radius:50%; pointer-events:none;
+}
+.hr1 {
+  width:600px; height:600px;
+  top:50%; right:-160px; transform:translateY(-50%);
+  border:1px solid rgba(224,154,58,.1);
+  animation:spinCW 55s linear infinite;
+}
+.hr1::before {
+  content:''; position:absolute; top:10px; left:50%;
+  width:10px; height:10px; border-radius:50%;
+  background:var(--amb3); opacity:.7;
+  transform:translateX(-50%);
+  animation:glowAmb 3s ease infinite;
+}
+.hr2 {
+  width:420px; height:420px;
+  top:50%; right:-50px; transform:translateY(-50%);
+  border:1px solid rgba(26,107,66,.1);
+  animation:spinCCW 38s linear infinite;
+}
+.hr2::after {
+  content:''; position:absolute; bottom:15px; right:0;
+  width:8px; height:8px; border-radius:50%;
+  background:var(--em3); opacity:.6;
+  animation:glowEm 2.8s ease infinite;
+}
+.hr3 {
+  width:260px; height:260px;
+  top:50%; right:60px; transform:translateY(-50%);
+  border:1px solid rgba(15,107,120,.08);
+  animation:spinCW 22s linear infinite;
+}
+/* Corner ornaments */
+.orn { position:absolute; width:52px; height:52px; pointer-events:none }
+.orn::before,.orn::after { content:''; position:absolute }
+.orn-tl::before { width:100%; height:1.5px; top:0; left:0; background:var(--amb); opacity:.4 }
+.orn-tl::after  { width:1.5px; height:100%; top:0; left:0; background:var(--amb); opacity:.4 }
+.orn-bl { bottom:64px; left:52px }
+.orn-bl::before { width:100%; height:1.5px; bottom:0; left:0; top:auto; background:var(--em3); opacity:.35 }
+.orn-bl::after  { width:1.5px; height:100%; top:0; left:0; background:var(--em3); opacity:.35 }
+.orn-tr { top:92px; right:52px }
+.orn-tr::before { width:100%; height:1.5px; top:0; left:0; background:var(--tl2); opacity:.3 }
+.orn-tr::after  { width:1.5px; height:100%; top:0; right:0; left:auto; background:var(--tl2); opacity:.3 }
+
+/* Hero layout */
+.h-inner {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:60px; align-items:center;
+  max-width:1240px; margin:0 auto; width:100%;
+  position:relative; z-index:1; padding-bottom:60px;
+}
+/* Headline */
+.h-headline {
+  font-family:var(--f-head);
+  font-size:clamp(3rem,5.5vw,5.8rem);
+  font-weight:800; line-height:1.01; letter-spacing:-.025em;
+  color:var(--td); margin-bottom:22px;
+}
+.h-sub {
+  font-family:var(--f-body); font-size:.98rem; font-style:italic;
+  color:var(--tm); line-height:1.95; max-width:440px;
+  border-left:2.5px solid var(--amb); padding-left:20px;
+  margin-bottom:38px;
+}
+.h-btns { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:60px }
+
+/* Stats bar */
+.h-stats {
+  display:flex; border-top:1px solid rgba(255,255,255,.08); padding-top:36px;
+}
+.hst { flex:1; padding:0 26px 0 0; border-right:1px solid rgba(255,255,255,.06) }
+.hst:last-child { border-right:none; padding:0 0 0 26px }
+.hst:nth-child(2) { padding:0 26px }
+.hst-n { font-family:var(--f-num); font-size:3.4rem; font-weight:300; line-height:1; letter-spacing:-.04em }
+.hst-1 .hst-n { color:var(--amb2) }
+.hst-2 .hst-n { color:var(--em-lt) }
+.hst-3 .hst-n { color:var(--tl3) }
+.hst-l { font-family:var(--f-ui); font-size:.65rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ts); margin-top:7px }
+.hst-bar { height:2px; background:rgba(255,255,255,.06); margin-top:12px; overflow:hidden }
+.hst-fill { height:100%; transform:scaleX(0); transform-origin:left; transition:transform 2.2s var(--expo) }
+.hst-1 .hst-fill { background:linear-gradient(90deg,var(--amb),var(--amb3)) }
+.hst-2 .hst-fill { background:linear-gradient(90deg,var(--em),var(--em3)) }
+.hst-3 .hst-fill { background:linear-gradient(90deg,var(--tl),var(--tl3)) }
+.hst-fill.go { transform:scaleX(1) }
+
+/* Hero right — photo */
+.h-right {
+  position:relative; display:flex;
+  align-items:flex-end; justify-content:center;
+  min-height:580px;
+}
+/* Multi-color glow behind photo */
+.h-glow-multi {
+  position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+  width:380px; height:440px; border-radius:50% 50% 0 0;
+  background:
+    radial-gradient(ellipse at top left,  rgba(26,107,66,.2) 0%,transparent 55%),
+    radial-gradient(ellipse at top right, rgba(192,124,40,.15) 0%,transparent 55%),
+    radial-gradient(ellipse at top,       rgba(15,107,120,.1) 0%,transparent 60%);
+  pointer-events:none;
+}
+.h-photo {
+  position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+  z-index:2; width:316px;
+  animation:drift 5.5s ease-in-out infinite;
+}
+.h-photo img {
+  width:100%;
+  filter:drop-shadow(0 48px 80px rgba(0,0,0,.75));
+}
+
+/* Floating info pills — each a different accent */
+.hpill {
+  position:absolute; z-index:3;
+  backdrop-filter:blur(16px); padding:16px 20px;
+  transition:transform .4s var(--spring),box-shadow .4s;
+}
+.hpill:hover { transform:translateY(-5px); box-shadow:0 20px 48px rgba(0,0,0,.5) }
+.hpill::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:1.5px;
+}
+.hpill-lbl { font-family:var(--f-ui); font-size:.57rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; margin-bottom:4px }
+.hpill-val { font-family:var(--f-num); font-size:1.45rem; font-weight:400; line-height:1 }
+.hpill-sub { font-family:var(--f-ui); font-size:.64rem; margin-top:3px }
+
+/* Pill 1 — Amber */
+.hp1 { top:88px; left:14px; background:rgba(192,124,40,.12); border:1px solid rgba(224,154,58,.25) }
+.hp1::before { background:linear-gradient(90deg,transparent,var(--amb3),transparent) }
+.hp1 .hpill-lbl { color:var(--amb2) }
+.hp1 .hpill-val { color:var(--amb-lt) }
+.hp1 .hpill-sub { color:rgba(224,154,58,.5) }
+
+/* Pill 2 — Emerald */
+.hp2 { bottom:200px; right:8px; background:rgba(26,107,66,.12); border:1px solid rgba(46,168,100,.25) }
+.hp2::before { background:linear-gradient(90deg,transparent,var(--em3),transparent) }
+.hp2 .hpill-lbl { color:var(--em3) }
+.hp2 .hpill-val { color:var(--em-lt) }
+.hp2 .hpill-sub { color:rgba(46,168,100,.5) }
+
+/* Pill 3 — Teal */
+.hp3 { bottom:118px; left:14px; background:rgba(15,107,120,.12); border:1px solid rgba(26,138,154,.25) }
+.hp3::before { background:linear-gradient(90deg,transparent,var(--tl3),transparent) }
+.hp3 .hpill-lbl { color:var(--tl2) }
+.hp3 .hpill-val { color:var(--tl3) }
+.hp3 .hpill-sub { color:rgba(26,138,154,.5) }
+
+/* ════════════════════════════════════════════════
+   MARQUEE — Amber accented
+   ════════════════════════════════════════════════ */
+.mq-wrap {
+  background:linear-gradient(135deg,var(--navy2),var(--navy3));
+  border-top:1px solid rgba(224,154,58,.14);
+  border-bottom:1px solid rgba(224,154,58,.14);
+  padding:20px 0; overflow:hidden;
+}
+.mq-track { display:flex; width:max-content; animation:marquee 30s linear infinite }
+.mq-track:hover { animation-play-state:paused }
+.mq-item {
+  display:flex; align-items:center; gap:12px; padding:0 44px;
+  font-family:var(--f-ui); font-size:.72rem; font-weight:600;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--plat); white-space:nowrap;
+}
+.mq-dot-amb { width:5px; height:5px; border-radius:50%; background:var(--amb2); opacity:.8; flex-shrink:0 }
+.mq-dot-em  { width:5px; height:5px; border-radius:50%; background:var(--em3);  opacity:.8; flex-shrink:0 }
+.mq-dot-tl  { width:5px; height:5px; border-radius:50%; background:var(--tl3);  opacity:.8; flex-shrink:0 }
+
+/* ════════════════════════════════════════════════
+   ABOUT — Ivory background with amber + green
+   ════════════════════════════════════════════════ */
+#about { padding:120px 0; background:var(--iv1); position:relative; overflow:hidden }
+#about::before {
+  content:'SHAPE UUP';
+  position:absolute; top:10px; right:-60px;
+  font-family:var(--f-head); font-size:11rem; font-weight:800;
+  color:rgba(26,107,66,.04); transform:rotate(-6deg);
+  pointer-events:none; white-space:nowrap; line-height:1;
+  letter-spacing:.04em;
+}
+.about-grid { display:grid; grid-template-columns:1fr 1.12fr; gap:104px; align-items:center }
+
+/* Photo */
+.a-mat-wrap { position:relative }
+.a-mat {
+  padding:14px; background:var(--iv2); border:1px solid var(--iv3);
+  box-shadow:0 40px 100px rgba(0,0,0,.13); position:relative;
+}
+.a-mat::before { content:''; position:absolute; top:-3px; left:-3px; width:28px; height:28px; border-top:2.5px solid var(--amb); border-left:2.5px solid var(--amb) }
+.a-mat::after  { content:''; position:absolute; bottom:-3px; right:-3px; width:28px; height:28px; border-bottom:2.5px solid var(--em); border-right:2.5px solid var(--em) }
+.a-mat img { width:100%; display:block }
+.a-badge {
+  position:absolute; bottom:-38px; right:-38px;
+  width:128px; height:128px;
+  background:var(--navy);
+  border:3px solid var(--iv1);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  position:absolute;
+}
+.a-badge::before { content:''; position:absolute; inset:8px; border:1px solid rgba(224,154,58,.2) }
+.a-badge .ab-n { font-family:var(--f-num); font-size:3.2rem; font-weight:300; color:var(--amb2); line-height:1; letter-spacing:-.04em }
+.a-badge .ab-l { font-family:var(--f-ui); font-size:.54rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--em3); text-align:center; line-height:1.5 }
+
+/* Content */
+.a-bio { font-family:var(--f-body); font-size:1.02rem; font-style:italic; color:var(--tl-mid); line-height:1.95; margin-bottom:14px }
+.a-bio strong { font-style:normal; color:var(--tl-dark); font-weight:600 }
+.a-quote {
+  font-family:var(--f-head); font-size:1.2rem; font-weight:500; font-style:italic;
+  color:var(--em); border-left:3px solid var(--amb);
+  padding:10px 0 10px 22px; margin:26px 0 32px; line-height:1.6;
+}
+.a-chips { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px }
+.chip {
+  font-family:var(--f-ui); font-size:.68rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase;
+  padding:8px 17px; border:1px solid var(--iv3); color:var(--tl-mid);
+  background:transparent; transition:all .32s; cursor:default;
+}
+.chip-em:hover  { border-color:var(--em); color:var(--em); background:rgba(26,107,66,.05); transform:translateY(-2px) }
+.chip-amb:hover { border-color:var(--amb); color:var(--amb); background:rgba(192,124,40,.05); transform:translateY(-2px) }
+.chip-tl:hover  { border-color:var(--tl2); color:var(--tl2); background:rgba(15,107,120,.05); transform:translateY(-2px) }
+.chip-bur:hover { border-color:var(--bur2); color:var(--bur2); background:rgba(122,28,46,.05); transform:translateY(-2px) }
+
+/* ════════════════════════════════════════════════
+   SERVICES — Navy with colored accents per card
+   ════════════════════════════════════════════════ */
+#services { padding:120px 0; background:var(--navy2); position:relative; overflow:hidden }
+#services::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.srv-hd { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:72px; flex-wrap:wrap; gap:24px }
+.srv-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(255,255,255,.04) }
+
+.svc {
+  padding:56px 48px; position:relative; overflow:hidden;
+  transition:background .4s var(--ease); cursor:default;
+}
+.svc-bgn {
+  position:absolute; top:16px; right:26px;
+  font-family:var(--f-num); font-size:7rem; font-weight:300;
+  line-height:1; letter-spacing:-.05em;
+  pointer-events:none; transition:color .4s,transform .5s var(--expo);
+}
+.svc-top { position:absolute; top:0; left:0; right:0; height:2.5px; transform:scaleX(0); transform-origin:left; transition:transform .55s var(--expo) }
+.svc:hover .svc-top { transform:scaleX(1) }
+.svc-icon { width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-size:1.55rem; margin-bottom:28px; transition:all .38s var(--expo); border:1px solid transparent }
+.svc h3 { font-family:var(--f-head); font-size:1.52rem; font-weight:600; color:var(--td); margin-bottom:13px; line-height:1.2; letter-spacing:-.01em }
+.svc p { font-family:var(--f-body); font-size:.9rem; font-style:italic; color:var(--tm); line-height:1.9; margin-bottom:26px }
+.svc-lnk { font-family:var(--f-ui); font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; display:inline-flex; align-items:center; gap:8px; transition:gap .32s var(--expo),color .28s }
+.svc:hover .svc-lnk { gap:14px }
+
+/* Card 1 — Amber */
+.svc-c1 { background:var(--navy2) }
+.svc-c1:hover { background:var(--navy3) }
+.svc-c1 .svc-bgn { color:rgba(224,154,58,.05) }
+.svc-c1:hover .svc-bgn { color:rgba(224,154,58,.1) }
+.svc-c1 .svc-top  { background:linear-gradient(90deg,var(--amb),var(--amb3)) }
+.svc-c1 .svc-icon { background:rgba(192,124,40,.1); border-color:rgba(224,154,58,.2) }
+.svc-c1:hover .svc-icon { background:rgba(192,124,40,.22); border-color:rgba(224,154,58,.38) }
+.svc-c1 .svc-lnk  { color:var(--amb2) }
+.svc-c1:hover .svc-lnk { color:var(--amb3) }
+
+/* Card 2 — Emerald */
+.svc-c2 { background:var(--navy2) }
+.svc-c2:hover { background:var(--navy3) }
+.svc-c2 .svc-bgn { color:rgba(46,168,100,.05) }
+.svc-c2:hover .svc-bgn { color:rgba(46,168,100,.1) }
+.svc-c2 .svc-top  { background:linear-gradient(90deg,var(--em),var(--em3)) }
+.svc-c2 .svc-icon { background:rgba(26,107,66,.1); border-color:rgba(46,168,100,.2) }
+.svc-c2:hover .svc-icon { background:rgba(26,107,66,.22); border-color:rgba(46,168,100,.38) }
+.svc-c2 .svc-lnk  { color:var(--em3) }
+.svc-c2:hover .svc-lnk { color:var(--em-lt) }
+
+/* Card 3 — Teal */
+.svc-c3 { background:var(--navy2) }
+.svc-c3:hover { background:var(--navy3) }
+.svc-c3 .svc-bgn { color:rgba(26,138,154,.05) }
+.svc-c3:hover .svc-bgn { color:rgba(26,138,154,.1) }
+.svc-c3 .svc-top  { background:linear-gradient(90deg,var(--tl),var(--tl3)) }
+.svc-c3 .svc-icon { background:rgba(15,107,120,.1); border-color:rgba(26,138,154,.2) }
+.svc-c3:hover .svc-icon { background:rgba(15,107,120,.22); border-color:rgba(26,138,154,.38) }
+.svc-c3 .svc-lnk  { color:var(--tl2) }
+.svc-c3:hover .svc-lnk { color:var(--tl3) }
+
+/* Card 4 — Burgundy */
+.svc-c4 { background:var(--navy2) }
+.svc-c4:hover { background:var(--navy3) }
+.svc-c4 .svc-bgn { color:rgba(160,37,64,.05) }
+.svc-c4:hover .svc-bgn { color:rgba(160,37,64,.1) }
+.svc-c4 .svc-top  { background:linear-gradient(90deg,var(--bur),var(--bur3)) }
+.svc-c4 .svc-icon { background:rgba(122,28,46,.1); border-color:rgba(160,37,64,.2) }
+.svc-c4:hover .svc-icon { background:rgba(122,28,46,.22); border-color:rgba(160,37,64,.38) }
+.svc-c4 .svc-lnk  { color:var(--bur2) }
+.svc-c4:hover .svc-lnk { color:var(--bur3) }
+
+/* ════════════════════════════════════════════════
+   STATS BAND — Amber/Gold background
+   ════════════════════════════════════════════════ */
+.stat-band {
+  background:linear-gradient(135deg,var(--amb) 0%,var(--amb2) 40%,#b86520 100%);
+  padding:80px 0; position:relative; overflow:hidden;
+}
+.stat-band::before {
+  content:''; position:absolute; inset:0;
+  background:rgba(0,0,0,.22);
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.stat-band::after {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+.stat-grid { display:grid; grid-template-columns:repeat(4,1fr); position:relative; z-index:1 }
+.stat-cell { padding:20px 32px; text-align:center; border-right:1px solid rgba(255,255,255,.1) }
+.stat-cell:last-child { border-right:none }
+.stat-n { font-family:var(--f-num); font-size:4.8rem; font-weight:300; color:#fff; line-height:1; letter-spacing:-.05em }
+.stat-suf { font-family:var(--f-num); font-size:3rem; font-weight:300 }
+.stat-l { font-family:var(--f-ui); font-size:.67rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-top:10px }
+
+/* ════════════════════════════════════════════════
+   PROCESS — Ivory with emerald steps
+   ════════════════════════════════════════════════ */
+#process { padding:120px 0; background:var(--iv1); position:relative }
+.proc-grid { display:grid; grid-template-columns:1fr 1fr; gap:96px; align-items:start }
+.proc-steps { display:flex; flex-direction:column; gap:0 }
+.pstep {
+  display:flex; gap:28px; align-items:flex-start;
+  padding:28px 0; border-bottom:1px solid var(--iv3);
+  transition:all .35s;
+}
+.pstep:first-child { padding-top:0 }
+.pstep:last-child  { border-bottom:none }
+.pstep-n { font-family:var(--f-num); font-size:3.2rem; font-weight:300; line-height:1; min-width:60px; letter-spacing:-.04em; transition:color .38s var(--expo) }
+.pstep:nth-child(1) .pstep-n { color:rgba(192,124,40,.2) }
+.pstep:nth-child(2) .pstep-n { color:rgba(26,107,66,.2) }
+.pstep:nth-child(3) .pstep-n { color:rgba(15,107,120,.2) }
+.pstep:nth-child(4) .pstep-n { color:rgba(122,28,46,.2) }
+.pstep:nth-child(1):hover .pstep-n { color:var(--amb2) }
+.pstep:nth-child(2):hover .pstep-n { color:var(--em2) }
+.pstep:nth-child(3):hover .pstep-n { color:var(--tl2) }
+.pstep:nth-child(4):hover .pstep-n { color:var(--bur2) }
+.pstep-body h4 { font-family:var(--f-head); font-size:1.1rem; font-weight:700; color:var(--tl-dark); margin-bottom:7px }
+.pstep-body p  { font-family:var(--f-body); font-size:.9rem; font-style:italic; color:var(--tl-mid); line-height:1.85 }
+
+/* Performance box — navy with multi-color bars */
+.perf-box { background:var(--navy); padding:52px; position:relative }
+.perf-box::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--amb),var(--em),var(--tl),var(--bur3)) }
+.perf-title { font-family:var(--f-head); font-size:1.7rem; font-weight:600; font-style:italic; color:var(--td); line-height:1.25; margin-bottom:40px; letter-spacing:-.01em }
+.perf-row { margin-bottom:26px; padding-bottom:26px; border-bottom:1px solid rgba(255,255,255,.06) }
+.perf-row:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0 }
+.perf-top { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:10px }
+.perf-lbl { font-family:var(--f-ui); font-size:.67rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ts) }
+.perf-pct { font-family:var(--f-num); font-size:1.7rem; font-weight:300; letter-spacing:-.04em }
+.perf-track { height:2.5px; background:rgba(255,255,255,.06) }
+.perf-fill { height:100%; transform:scaleX(0); transform-origin:left; transition:transform 1.8s var(--expo) }
+.perf-fill.go { transform:scaleX(1) }
+.pf1 { background:linear-gradient(90deg,var(--amb),var(--amb3)) }
+.pf2 { background:linear-gradient(90deg,var(--em),var(--em3)) }
+.pf3 { background:linear-gradient(90deg,var(--tl),var(--tl3)) }
+.pf4 { background:linear-gradient(90deg,var(--bur),var(--bur3)) }
+.pc1 { color:var(--amb2) }
+.pc2 { color:var(--em-lt) }
+.pc3 { color:var(--tl3) }
+.pc4 { color:var(--bur3) }
+
+/* ════════════════════════════════════════════════
+   TESTIMONIALS — Deep navy with colored top accents
+   ════════════════════════════════════════════════ */
+#testimonials { padding:120px 0; background:var(--navy); position:relative; overflow:hidden }
+#testimonials::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse at 12% 50%,rgba(192,124,40,.07) 0%,transparent 45%),
+    radial-gradient(ellipse at 88% 50%,rgba(26,107,66,.07) 0%,transparent 45%),
+    radial-gradient(ellipse at 50% 10%,rgba(15,107,120,.06) 0%,transparent 45%);
+}
+.t-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(255,255,255,.04) }
+.tcard { padding:48px 38px; position:relative; overflow:hidden; transition:background .35s }
+.tcard:hover { background:var(--navy2) }
+.tc-top { position:absolute; top:0; left:0; right:0; height:2.5px; transform:scaleX(0); transform-origin:left; transition:transform .55s var(--expo) }
+.tcard:hover .tc-top { transform:scaleX(1) }
+.tc1 { background:var(--navy) }
+.tc1 .tc-top  { background:linear-gradient(90deg,var(--amb),var(--amb3)) }
+.tc2 { background:var(--navy) }
+.tc2 .tc-top  { background:linear-gradient(90deg,var(--em),var(--em3)) }
+.tc3 { background:var(--navy) }
+.tc3 .tc-top  { background:linear-gradient(90deg,var(--tl),var(--tl3)) }
+.tc-stars { display:flex; gap:4px; margin-bottom:20px }
+.tstar { width:12px; height:12px; clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%) }
+.tc1 .tstar { background:var(--amb3) }
+.tc2 .tstar { background:var(--em3) }
+.tc3 .tstar { background:var(--tl3) }
+.tc-q { font-family:var(--f-head); font-size:5rem; font-weight:800; line-height:.65; margin-bottom:8px; transition:opacity .35s; opacity:.08 }
+.tcard:hover .tc-q { opacity:.16 }
+.tc1 .tc-q { color:var(--amb3) }
+.tc2 .tc-q { color:var(--em3) }
+.tc3 .tc-q { color:var(--tl3) }
+.tc-text { font-family:var(--f-body); font-size:.97rem; font-style:italic; color:var(--tm); line-height:1.9; margin-bottom:26px }
+.tc-auth { display:flex; align-items:center; gap:14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.06) }
+.tc-av { width:46px; height:46px; display:flex; align-items:center; justify-content:center; font-family:var(--f-num); font-size:1.05rem; font-weight:400 }
+.tc1 .tc-av { background:rgba(192,124,40,.12); border:1px solid rgba(224,154,58,.22); color:var(--amb2) }
+.tc2 .tc-av { background:rgba(26,107,66,.12);  border:1px solid rgba(46,168,100,.22);  color:var(--em3) }
+.tc3 .tc-av { background:rgba(15,107,120,.12); border:1px solid rgba(26,138,154,.22); color:var(--tl3) }
+.tc-name { font-family:var(--f-ui); font-size:.85rem; font-weight:600; color:var(--td) }
+.tc-role { font-family:var(--f-ui); font-size:.68rem; color:var(--ts); margin-top:2px }
+
+/* Google trust badge */
+.g-trust {
+  display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+  margin-top:56px; padding:28px 40px;
+  background:rgba(224,154,58,.04); border:1px solid rgba(224,154,58,.15);
+}
+.g-trust .gs { display:flex; gap:5px }
+.g-trust .gs span { color:var(--amb3); font-size:1.1rem }
+.g-trust .gt { flex:1 }
+.g-trust .gt strong { display:block; font-family:var(--f-head); font-size:1.1rem; font-weight:500; color:var(--td); margin-bottom:2px }
+.g-trust .gt span { font-family:var(--f-ui); font-size:.72rem; color:var(--ts) }
+.g-trust a { font-family:var(--f-ui); font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--amb2); border-bottom:1px solid rgba(224,154,58,.3); padding-bottom:2px; transition:all .25s }
+.g-trust a:hover { color:var(--amb3); border-color:var(--amb3) }
+
+/* ════════════════════════════════════════════════
+   BLOG — Ivory with colored card accents
+   ════════════════════════════════════════════════ */
+#blog { padding:120px 0; background:var(--iv2); position:relative }
+.blog-hd { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:72px; flex-wrap:wrap; gap:24px }
+.b-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px }
+.bcard {
+  background:var(--iv1); border:1px solid var(--iv3);
+  overflow:hidden; position:relative;
+  transition:all .42s var(--expo);
+}
+.bcard:hover { transform:translateY(-12px); box-shadow:0 44px 88px rgba(0,0,0,.12) }
+.bcard-tl { position:absolute; top:0; left:0; right:0; height:2.5px; transform:scaleX(0); transform-origin:left; transition:transform .5s var(--expo) }
+.bcard:hover .bcard-tl { transform:scaleX(1) }
+.bc1 .bcard-tl { background:linear-gradient(90deg,var(--amb),var(--amb3)) }
+.bc2 .bcard-tl { background:linear-gradient(90deg,var(--em),var(--em3)) }
+.bc3 .bcard-tl { background:linear-gradient(90deg,var(--tl),var(--tl3)) }
+.bc1:hover { border-color:rgba(192,124,40,.28) }
+.bc2:hover { border-color:rgba(26,107,66,.28) }
+.bc3:hover { border-color:rgba(15,107,120,.28) }
+
+.bcard-thumb { height:200px; display:flex; align-items:center; justify-content:center; font-size:3.8rem; position:relative }
+.bc1 .bcard-thumb { background:linear-gradient(135deg,#fff8e1,var(--amb-lt)) }
+.bc2 .bcard-thumb { background:linear-gradient(135deg,#e8f8f0,var(--em-pale)) }
+.bc3 .bcard-thumb { background:linear-gradient(135deg,#e0f6f8,#b2eaf0) }
+
+.bcard-body { padding:28px }
+.bcard-tag { font-family:var(--f-ui); font-size:.62rem; font-weight:700; letter-spacing:.17em; text-transform:uppercase; margin-bottom:12px; display:block }
+.bc1 .bcard-tag { color:var(--amb) }
+.bc2 .bcard-tag { color:var(--em) }
+.bc3 .bcard-tag { color:var(--tl2) }
+.bcard h3 { font-family:var(--f-head); font-size:1.1rem; font-weight:700; color:var(--tl-dark); line-height:1.42; margin-bottom:12px }
+.bcard p  { font-family:var(--f-body); font-size:.875rem; font-style:italic; color:var(--tl-mid); line-height:1.82; margin-bottom:20px }
+.bcard-foot { display:flex; align-items:center; justify-content:space-between; padding-top:17px; border-top:1px solid var(--iv3) }
+.bcard-date { font-family:var(--f-ui); font-size:.68rem; color:var(--tl-mid) }
+.b-read { font-family:var(--f-ui); font-size:.65rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; transition:color .25s }
+.bc1 .b-read { color:var(--amb) }
+.bc2 .b-read { color:var(--em) }
+.bc3 .b-read { color:var(--tl2) }
+
+/* ════════════════════════════════════════════════
+   BOOKING — Deep teal/navy gradient
+   ════════════════════════════════════════════════ */
+#booking {
+  padding:120px 0;
+  background:linear-gradient(135deg,var(--navy3) 0%,var(--tl) 60%,var(--navy2) 100%);
+  position:relative; overflow:hidden;
+}
+#booking::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:rgba(0,0,0,.35);
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:64px 64px;
+}
+#booking::after {
+  content:''; position:absolute; top:-200px; right:-200px;
+  width:500px; height:500px; border-radius:50%;
+  background:radial-gradient(circle,rgba(192,124,40,.1) 0%,transparent 65%);
+  pointer-events:none; animation:glowAmb 8s ease infinite;
+}
+.book-grid { display:grid; grid-template-columns:1fr 1fr; gap:96px; align-items:center; position:relative; z-index:1 }
+.bk-pts { display:flex; flex-direction:column; gap:0; margin:28px 0 42px }
+.bkpt { display:flex; gap:20px; align-items:flex-start; padding:20px 0; border-bottom:1px solid rgba(255,255,255,.08) }
+.bkpt:last-child { border-bottom:none }
+.bk-chk { width:27px; height:27px; min-width:27px; border:1px solid rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-family:var(--f-ui); font-size:.7rem; color:var(--amb3); margin-top:1px }
+.bkpt h5 { font-family:var(--f-ui); font-size:.85rem; font-weight:600; color:var(--td); margin-bottom:3px }
+.bkpt p  { font-family:var(--f-body); font-size:.8rem; font-style:italic; color:rgba(255,255,255,.45); line-height:1.65 }
+
+/* Form card */
+.fcard { background:var(--iv1); padding:52px; position:relative; box-shadow:0 52px 100px rgba(0,0,0,.4) }
+.fcard::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--amb),var(--em),var(--tl)) }
+.fcard h3 { font-family:var(--f-head); font-size:1.8rem; font-weight:600; color:var(--tl-dark); margin-bottom:32px; letter-spacing:-.01em }
+.fg { display:grid; grid-template-columns:1fr 1fr; gap:20px }
+.full { grid-column:1/-1 }
+.ff { display:flex; flex-direction:column; gap:7px }
+.ff label { font-family:var(--f-ui); font-size:.62rem; font-weight:700; letter-spacing:.17em; text-transform:uppercase; color:var(--tl-mid) }
+.ff input,.ff select,.ff textarea {
+  background:transparent; border:none; border-bottom:1.5px solid var(--iv3);
+  padding:12px 0; font-family:var(--f-body); font-size:.97rem; font-style:italic;
+  color:var(--tl-dark); outline:none; transition:border-color .3s; appearance:none;
+}
+.ff input:focus,.ff select:focus,.ff textarea:focus { border-bottom-color:var(--em) }
+.ff input::placeholder,.ff textarea::placeholder { color:var(--tl-mid); font-style:italic }
+.ff textarea { resize:none; height:88px }
+.ff select { cursor:pointer; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%233a5240' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 4px center }
+.ff select option { background:var(--iv1) }
+
+/* ════════════════════════════════════════════════
+   NEWSLETTER — Emerald green background
+   ════════════════════════════════════════════════ */
+.nl-band {
+  background:linear-gradient(135deg,var(--em) 0%,#165c38 50%,var(--navy) 100%);
+  padding:80px 0; position:relative; overflow:hidden;
+}
+.nl-band::before {
+  content:''; position:absolute; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.nl-band::after { content:''; position:absolute; top:-150px; left:-150px; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle,rgba(192,124,40,.15) 0%,transparent 65%); pointer-events:none; animation:glowAmb 7s ease infinite }
+.nl-inner { max-width:640px; margin:0 auto; text-align:center; padding:0 36px; position:relative; z-index:1 }
+.nl-eyebrow { font-family:var(--f-ui); font-size:.67rem; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--amb3); display:block; margin-bottom:16px }
+.nl-title { font-family:var(--f-head); font-size:clamp(2rem,3vw,2.6rem); font-weight:700; color:#fff; margin-bottom:12px; letter-spacing:-.015em }
+.nl-title em { font-style:italic; font-weight:400 }
+.nl-sub { font-family:var(--f-body); font-size:.92rem; font-style:italic; color:rgba(255,255,255,.6); margin-bottom:36px; line-height:1.85 }
+.nl-form { display:flex; max-width:480px; margin:0 auto; border:1px solid rgba(255,255,255,.2); overflow:hidden }
+.nl-form input { flex:1; padding:16px 20px; background:rgba(255,255,255,.05); border:none; color:#fff; font-family:var(--f-body); font-style:italic; font-size:.9rem; outline:none }
+.nl-form input::placeholder { color:rgba(255,255,255,.4) }
+.nl-form button { padding:16px 24px; background:var(--amb); border:none; cursor:pointer; font-family:var(--f-ui); font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#fff; transition:background .3s; white-space:nowrap }
+.nl-form button:hover { background:var(--amb2) }
+.nl-disc { font-family:var(--f-ui); font-size:.64rem; color:rgba(255,255,255,.35); margin-top:14px; letter-spacing:.08em }
+
+/* ════════════════════════════════════════════════
+   CONTACT — Ivory with navy form
+   ════════════════════════════════════════════════ */
+#contact { padding:120px 0; background:var(--iv1); position:relative }
+.con-grid { display:grid; grid-template-columns:1fr 1fr; gap:96px; align-items:start }
+.ci-row { display:flex; gap:20px; align-items:flex-start; padding:22px 0; border-bottom:1px solid var(--iv3) }
+.ci-row:last-of-type { border-bottom:none }
+.ci-ico { width:44px; height:44px; min-width:44px; border:1px solid var(--iv3); display:flex; align-items:center; justify-content:center; font-size:1.1rem; background:var(--iv2); transition:all .32s }
+.ci-row h4 { font-family:var(--f-ui); font-size:.62rem; font-weight:700; letter-spacing:.17em; text-transform:uppercase; color:var(--tl-mid); margin-bottom:4px }
+.ci-row p,.ci-row a { font-family:var(--f-body); font-size:.98rem; color:var(--tl-dark); transition:color .25s }
+.ci-row:nth-child(1):hover .ci-ico { border-color:var(--em); background:rgba(26,107,66,.06) }
+.ci-row:nth-child(2):hover .ci-ico { border-color:var(--amb); background:rgba(192,124,40,.06) }
+.ci-row:nth-child(3):hover .ci-ico { border-color:var(--tl2); background:rgba(15,107,120,.06) }
+.ci-row:nth-child(4):hover .ci-ico { border-color:var(--bur2); background:rgba(122,28,46,.06) }
+.ci-row:nth-child(1) a:hover { color:var(--em) }
+.ci-row:nth-child(2) a:hover { color:var(--amb) }
+.socials { display:flex; gap:10px; margin-top:32px }
+.soc { width:44px; height:44px; border:1px solid var(--iv3); display:flex; align-items:center; justify-content:center; color:var(--tl-mid); font-size:.88rem; font-weight:800; transition:all .32s }
+.soc-wa:hover { border-color:#25d366; color:#25d366; background:rgba(37,211,102,.06); transform:translateY(-3px) }
+.soc-li:hover { border-color:var(--tl2); color:var(--tl2); background:rgba(15,107,120,.06); transform:translateY(-3px) }
+
+.cform { background:var(--navy); padding:52px; position:relative; box-shadow:0 40px 100px rgba(0,0,0,.18) }
+.cform::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--amb),var(--em),var(--tl),var(--bur3)) }
+.cform h3 { font-family:var(--f-head); font-size:1.8rem; font-weight:600; font-style:italic; color:var(--td); margin-bottom:32px }
+.cform .ff label { color:var(--ts) }
+.cform .ff input,.cform .ff select,.cform .ff textarea { color:var(--td); border-bottom-color:rgba(255,255,255,.1) }
+.cform .ff input:focus,.cform .ff select:focus,.cform .ff textarea:focus { border-bottom-color:var(--amb2) }
+.cform .ff input::placeholder,.cform .ff textarea::placeholder { color:var(--ts) }
+.cform .ff select { background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23e09a3a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 4px center }
+.cform .ff select option { background:var(--navy) }
+
+/* ════════════════════════════════════════════════
+   WHATSAPP FAB
+   ════════════════════════════════════════════════ */
+.wa-fab {
+  position:fixed; bottom:32px; right:32px; z-index:9000;
+  width:58px; height:58px; border-radius:50%;
+  background:#25d366; display:flex; align-items:center; justify-content:center; font-size:1.5rem;
+  box-shadow:0 8px 32px rgba(37,211,102,.45);
+  cursor:pointer; animation:waPulse 3s ease infinite;
+  transition:transform .35s var(--spring);
+}
+.wa-fab:hover { transform:scale(1.12) }
+.wa-tip { position:absolute; right:72px; background:var(--navy); color:var(--td); border:1px solid rgba(224,154,58,.2); padding:8px 16px; font-family:var(--f-ui); font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; opacity:0; transition:opacity .3s; pointer-events:none }
+.wa-fab:hover .wa-tip { opacity:1 }
+
+/* ════════════════════════════════════════════════
+   FOOTER — Very dark with multi-color accents
+   ════════════════════════════════════════════════ */
+footer {
+  background:var(--navy);
+  border-top:3px solid transparent;
+  border-image:linear-gradient(90deg,var(--amb),var(--em),var(--tl),var(--bur3)) 1;
+  padding:80px 0 36px;
+}
+.ft-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:64px }
+.ft-brand-row { display:flex; align-items:center; gap:12px; margin-bottom:16px }
+.ft-brand-row img { width:40px; height:40px; object-fit:contain; border-radius:6px }
+.ft-name { font-family:var(--f-head); font-size:1.35rem; font-weight:700; color:var(--td) }
+.ft-rule { width:36px; height:2px; background:linear-gradient(90deg,var(--amb),var(--em)); margin:16px 0 }
+.ft-body { font-family:var(--f-body); font-size:.875rem; font-style:italic; color:var(--ts); line-height:1.9; max-width:230px }
+.fc h5 { font-family:var(--f-ui); font-size:.63rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin-bottom:20px }
+.fc:nth-child(2) h5 { color:var(--amb2) }
+.fc:nth-child(3) h5 { color:var(--em3) }
+.fc:nth-child(4) h5 { color:var(--tl3) }
+.fc ul { display:flex; flex-direction:column; gap:12px }
+.fc ul a { font-family:var(--f-body); font-size:.875rem; color:var(--ts); transition:color .25s }
+.fc:nth-child(2) ul a:hover { color:var(--amb2) }
+.fc:nth-child(3) ul a:hover { color:var(--em3) }
+.fc:nth-child(4) ul a:hover { color:var(--tl3) }
+.ft-base { border-top:1px solid rgba(255,255,255,.07); padding-top:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px }
+.ft-base p { font-family:var(--f-ui); font-size:.68rem; color:var(--ts); letter-spacing:.06em }
+.ft-base a { font-family:var(--f-ui); font-size:.68rem; color:rgba(74,96,112,.4); transition:color .25s }
+.ft-base a:hover { color:var(--amb2) }
+.ft-sig { font-family:var(--f-ui); font-size:.62rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--em3) }
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════ */
+@media(max-width:1100px){
+  #nav { padding:0 28px }
+  .n-links { display:none }
+  .hamburger { display:flex }
+  #home { padding:80px 28px 0 }
+  .h-inner { grid-template-columns:1fr; gap:52px }
+  .h-right { order:-1; min-height:400px }
+  .h-photo { width:240px }
+  .hr1 { width:380px; height:380px; right:-100px }
+  .hr2,.hr3 { display:none }
+  .about-grid,.proc-grid,.book-grid,.con-grid { grid-template-columns:1fr; gap:56px }
+  .srv-grid,.t-grid,.b-grid { grid-template-columns:1fr }
+  .stat-grid { grid-template-columns:repeat(2,1fr) }
+  .stat-cell:nth-child(2) { border-right:none }
+  .ft-grid { grid-template-columns:1fr 1fr; gap:40px }
+  .a-mat-wrap { max-width:420px }
+  .a-badge { right:0; bottom:-20px }
+  .perf-box { position:static }
+  .orn-bl,.orn-tr { display:none }
+}
+@media(max-width:640px){
+  #nav { padding:0 18px }
+  #home { padding:80px 18px 0 }
+  .h-headline { font-size:2.7rem }
+  .h-stats { flex-direction:column; gap:0; border-top:none; padding-top:0 }
+  .hst { border-right:none!important; padding:16px 0!important; border-bottom:1px solid rgba(255,255,255,.07) }
+  .hst:last-child { border-bottom:none }
+  .ft-grid { grid-template-columns:1fr }
+  footer { padding:56px 0 28px }
+  .fcard,.cform { padding:28px 22px }
+  .wrap { padding:0 20px }
+  .sec { padding:80px 0 }
+  .wa-fab { bottom:20px; right:20px }
+}
+</style>
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="c-d" id="cDot"></div>
+<div class="c-r" id="cRing"></div>
+
+<!-- WHATSAPP BUTTON ← EDIT: number -->
+<a class="wa-fab" href="https://wa.me/919239251515?text=Hello%20Utpaal%20ji%2C%20I%20wish%20to%20book%20a%20private%20consultation%20with%20Shape%20Uup." target="_blank" rel="noopener" aria-label="WhatsApp">
+  💬<span class="wa-tip">Private Consultation</span>
+</a>
+
+<!-- NAVIGATION ← EDIT: logo, name, links -->
+<nav id="nav">
+  <div class="n-brand">
+    <img src="1000257944.jpg" alt="Shape Uup" class="n-logo"/>
+    <div>
+      <div class="n-name">Shape Uup</div>
+      <div class="n-tag">Premier Consultancy</div>
+    </div>
+  </div>
+  <div class="n-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Clients</a>
+    <a href="#blog">Insights</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="https://wa.me/919239251515" class="n-cta btn-shine" target="_blank">↗ Book Now</a>
+    <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#home"         onclick="closeMob()">Home</a>
+  <a href="#about"        onclick="closeMob()">About</a>
+  <a href="#services"     onclick="closeMob()">Services</a>
+  <a href="#testimonials" onclick="closeMob()">Clients</a>
+  <a href="#blog"         onclick="closeMob()">Insights</a>
+  <a href="#contact"      onclick="closeMob()">Contact</a>
+  <a href="https://wa.me/919239251515" class="mob-cta-m" target="_blank">↗ Book Consultation</a>
+</div>
+
+<!-- HERO ← EDIT: kicker text, headline, description, stats -->
+<section id="home">
+  <div class="h-mesh"></div>
+  <div class="h-grid"></div>
+  <div class="h-ring hr1"></div>
+  <div class="h-ring hr2"></div>
+  <div class="h-ring hr3"></div>
+  <div class="orn orn-tl" style="top:92px;left:52px"></div>
+  <div class="orn orn-bl"></div>
+  <div class="orn orn-tr"></div>
+  <div id="particles" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0"></div>
+
+  <div class="h-inner">
+    <!-- Text Column -->
+    <div>
+      <div class="fu d0" style="display:flex;align-items:center;gap:12px;margin-bottom:26px">
+        <span style="width:9px;height:9px;border-radius:50%;background:var(--amb3);box-shadow:0 0 10px var(--amb3);animation:glowAmb 2.5s ease infinite;display:block"></span>
+        <span style="font-family:var(--f-ui);font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ts)">Trusted Since 2015 &nbsp;·&nbsp; West Bengal, India</span>
+      </div>
+
+      <!-- ← EDIT: Headline lines -->
+      <h1 class="h-headline">
+        <span class="fu d1">Shaping</span><br>
+        <span class="sh-amb fu d2" style="font-style:italic;font-weight:400">Futures.</span><br>
+        <span class="sh-em fu d3">Building Legacies.</span>
+      </h1>
+
+      <!-- ← EDIT: Description -->
+      <p class="h-sub fu d3">
+        Private consultancy in Finance, Career, Counselling &amp; Training — crafted exclusively for Business Owners &amp; Entrepreneurs who demand extraordinary results.
+      </p>
+
+      <div class="h-btns fu d4">
+        <a href="#booking"  class="btn btn-amb btn-shine">Request Consultation <span class="btn-arr">→</span></a>
+        <a href="#services" class="btn btn-ghost-lt">Our Services</a>
+      </div>
+
+      <!-- ← EDIT: stat numbers -->
+      <div class="h-stats fu d5">
+        <div class="hst hst-1">
+          <div class="hst-n" data-target="500" data-suf="+">500+</div>
+          <div class="hst-l">Clients Advised</div>
+          <div class="hst-bar"><div class="hst-fill" data-w=".95"></div></div>
+        </div>
+        <div class="hst hst-2">
+          <div class="hst-n" data-target="28" data-suf="+">28+</div>
+          <div class="hst-l">Years Experience</div>
+          <div class="hst-bar"><div class="hst-fill" data-w=".82"></div></div>
+        </div>
+        <div class="hst hst-3">
+          <div class="hst-n" data-target="98" data-suf="%">98%</div>
+          <div class="hst-l">Success Rate</div>
+          <div class="hst-bar"><div class="hst-fill" data-w=".98"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Column -->
+    <div class="h-right fu d2">
+      <div class="h-glow-multi"></div>
+      <div class="h-photo">
+        <img src="1000258030.jpg" alt="Utpaal Kumaar Maaiti — Founder, Shape Uup"/>
+      </div>
+      <!-- Floating pills — amber, emerald, teal -->
+      <div class="hpill hp1">
+        <div class="hpill-lbl">Specialisation</div>
+        <div class="hpill-val f-num">Finance &amp;<br>Wealth</div>
+        <div class="hpill-sub">Strategic Advisory</div>
+      </div>
+      <div class="hpill hp2">
+        <div class="hpill-lbl">First Session</div>
+        <div class="hpill-val f-num">₹ Zero</div>
+        <div class="hpill-sub">No obligation</div>
+      </div>
+      <div class="hpill hp3">
+        <div class="hpill-lbl">Office Hours</div>
+        <div class="hpill-val f-num">Mon–Sat</div>
+        <div class="hpill-sub">10 AM – 6 PM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="mq-wrap">
+  <div class="mq-track" id="mqTrack">
+    <div class="mq-item"><div class="mq-dot-amb"></div>Certified Financial Consultant</div>
+    <div class="mq-item"><div class="mq-dot-em"></div>500+ Clients Served</div>
+    <div class="mq-item"><div class="mq-dot-tl"></div>28+ Years of Excellence</div>
+    <div class="mq-item"><div class="mq-dot-amb"></div>4.9 / 5.0 Google Rating</div>
+    <div class="mq-item"><div class="mq-dot-em"></div>Certified Career Counsellor</div>
+    <div class="mq-item"><div class="mq-dot-tl"></div>West Bengal, India</div>
+    <div class="mq-item"><div class="mq-dot-amb"></div>Finance · Career · Counselling · Training</div>
+    <div class="mq-item"><div class="mq-dot-em"></div>98% Client Success Rate</div>
+    <div class="mq-item"><div class="mq-dot-amb"></div>Certified Financial Consultant</div>
+    <div class="mq-item"><div class="mq-dot-em"></div>500+ Clients Served</div>
+    <div class="mq-item"><div class="mq-dot-tl"></div>28+ Years of Excellence</div>
+    <div class="mq-item"><div class="mq-dot-amb"></div>4.9 / 5.0 Google Rating</div>
+    <div class="mq-item"><div class="mq-dot-em"></div>Certified Career Counsellor</div>
+    <div class="mq-item"><div class="mq-dot-tl"></div>West Bengal, India</div>
+    <div class="mq-item"><div class="mq-dot-amb"></div>Finance · Career · Counselling · Training</div>
+    <div class="mq-item"><div class="mq-dot-em"></div>98% Client Success Rate</div>
+  </div>
+</div>
+
+<!-- ABOUT ← EDIT: Name, bio, years, quote, chips -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="sl">
+      <div class="a-mat-wrap">
+        <div class="a-mat">
+          <img src="1000257844.jpg" alt="Utpaal Kumaar Maaiti"/>
+        </div>
+        <div class="a-badge">
+          <div class="ab-n f-num">28+</div>
+          <div class="ab-l">Years of<br>Excellence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sr2">
+      <div class="eyebrow eyebrow-em">The Advisor</div>
+      <div class="rule rule-amb"></div>
+      <h2 class="f-head" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;line-height:1.08;letter-spacing:-.015em;color:var(--tl-dark);margin-bottom:24px">
+        Utpaal Kumaar<br><em style="color:var(--em)">Maaiti</em>
+      </h2>
+      <!-- ← EDIT: Bio paragraphs -->
+      <p class="a-bio">With over <strong>28 years</strong> of deep expertise spanning financial strategy, career architecture, personal counselling, and professional training, I have dedicated my practice to one mission: <strong>transforming the trajectories of ambitious individuals and thriving enterprises</strong> across West Bengal.</p>
+      <p class="a-bio" style="margin-top:12px">At <strong>Shape Uup</strong>, I offer something most consultancies cannot — a deeply personal engagement, a precise understanding of your context, and strategies that are <strong>bespoke, bold, and genuinely executable.</strong></p>
+      <!-- ← EDIT: quote -->
+      <blockquote class="a-quote">"Helping you grow, plan &amp; succeed — not just for today, but for generations."</blockquote>
+      <div class="a-chips">
+        <span class="chip chip-amb">Finance Planning</span>
+        <span class="chip chip-em">Career Architecture</span>
+        <span class="chip chip-tl">Private Counselling</span>
+        <span class="chip chip-bur">Executive Training</span>
+        <span class="chip chip-amb">Wealth Management</span>
+        <span class="chip chip-em">Business Strategy</span>
+      </div>
+      <a href="#booking" class="btn btn-em btn-shine">Schedule a Private Session <span class="btn-arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES ← EDIT: service title, description for each card -->
+<section id="services">
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="srv-hd">
+      <div class="sr">
+        <div class="eyebrow">Areas of Practice</div>
+        <div class="rule rule-amb"></div>
+        <h2 class="f-head" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;letter-spacing:-.015em">Our Core <em class="sh-em" style="font-style:italic;font-weight:400">Services</em></h2>
+      </div>
+      <a href="#contact" class="btn btn-ghost-lt sr">Enquire Now <span class="btn-arr">→</span></a>
+    </div>
+    <div class="srv-grid sg">
+      <div class="svc svc-c1 sr">
+        <div class="svc-top"></div>
+        <div class="svc-bgn f-num">01</div>
+        <div class="svc-icon">💰</div>
+        <h3>Finance &amp; Wealth Planning</h3>
+        <p>Bespoke investment strategies, tax optimisation, cash-flow management, and wealth planning crafted for high-achieving individuals and enterprises — not templates, but tailored blueprints for your financial future.</p>
+        <span class="svc-lnk">Explore This Service <span class="btn-arr">→</span></span>
+      </div>
+      <div class="svc svc-c2 sr">
+        <div class="svc-top"></div>
+        <div class="svc-bgn f-num">02</div>
+        <div class="svc-icon">🚀</div>
+        <h3>Career Architecture</h3>
+        <p>Strategic career roadmaps, executive positioning, professional rebranding, and high-stakes transitions — precision-designed to place exceptional people exactly where they deserve to be in their industry.</p>
+        <span class="svc-lnk">Explore This Service <span class="btn-arr">→</span></span>
+      </div>
+      <div class="svc svc-c3 sr">
+        <div class="svc-top"></div>
+        <div class="svc-bgn f-num">03</div>
+        <div class="svc-icon">🧠</div>
+        <h3>Private Counselling</h3>
+        <p>Confidential, judgement-free one-on-one sessions that restore clarity, build unshakeable resilience, and unlock the mental foundations required for sustained personal and professional success.</p>
+        <span class="svc-lnk">Explore This Service <span class="btn-arr">→</span></span>
+      </div>
+      <div class="svc svc-c4 sr">
+        <div class="svc-top"></div>
+        <div class="svc-bgn f-num">04</div>
+        <div class="svc-icon">📚</div>
+        <h3>Executive Training</h3>
+        <p>Premium, outcome-driven programmes and immersive workshops for individuals and leadership teams — building the skills, mindsets, and capabilities that distinguish the truly remarkable from the merely competent.</p>
+        <span class="svc-lnk">Explore This Service <span class="btn-arr">→</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND (amber/gold background) ← EDIT: numbers -->
+<div class="stat-band">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat-cell sr">
+        <div class="stat-n f-num"><span class="ctr" data-target="500">0</span><span class="stat-suf">+</span></div>
+        <div class="stat-l">Clients Advised</div>
+      </div>
+      <div class="stat-cell sr">
+        <div class="stat-n f-num"><span class="ctr" data-target="28">0</span><span class="stat-suf">+</span></div>
+        <div class="stat-l">Years Experience</div>
+      </div>
+      <div class="stat-cell sr">
+        <div class="stat-n f-num"><span class="ctr" data-target="98">0</span><span class="stat-suf">%</span></div>
+        <div class="stat-l">Success Rate</div>
+      </div>
+      <div class="stat-cell sr">
+        <div class="stat-n f-num"><span class="ctr" data-target="4">0</span></div>
+        <div class="stat-l">Core Disciplines</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS ← EDIT: step titles and descriptions -->
+<section id="process">
+  <div class="wrap proc-grid">
+    <div>
+      <div class="eyebrow eyebrow-tl sr">The Methodology</div>
+      <div class="rule rule-tl sr"></div>
+      <h2 class="f-head sr" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;letter-spacing:-.015em;color:var(--tl-dark);margin-bottom:10px">
+        Why Discerning<br>Clients Choose <em style="color:var(--em)">Us</em>
+      </h2>
+      <div class="proc-steps" style="margin-top:36px">
+        <div class="pstep sr">
+          <div class="pstep-n f-num">01</div>
+          <div class="pstep-body"><h4>Deep Discovery</h4><p>Every engagement begins with a thorough private discovery session. We listen before we advise — because asking the right questions matters infinitely more than quick answers.</p></div>
+        </div>
+        <div class="pstep sr">
+          <div class="pstep-n f-num">02</div>
+          <div class="pstep-body"><h4>Bespoke Strategy</h4><p>No two clients are alike. Your strategy is built exclusively around your goals, resources, and aspirations — never borrowed from a pre-made playbook.</p></div>
+        </div>
+        <div class="pstep sr">
+          <div class="pstep-n f-num">03</div>
+          <div class="pstep-body"><h4>Precision Execution</h4><p>Strategy without execution is fantasy. We guide you through every phase of implementation with clarity, accountability, and real-time course correction.</p></div>
+        </div>
+        <div class="pstep sr">
+          <div class="pstep-n f-num">04</div>
+          <div class="pstep-body"><h4>Sustained Partnership</h4><p>Our relationship does not end at the consultation. We remain your trusted advisor — available and fully invested as your ambitions grow.</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- Performance Panel ← EDIT: labels and % numbers -->
+    <div>
+      <div class="perf-box sr2">
+        <p class="perf-title">Performance that<br><em>speaks clearly.</em></p>
+        <div class="perf-row"><div class="perf-top"><span class="perf-lbl">Overall Client Satisfaction</span><span class="perf-pct f-num pc1">98%</span></div><div class="perf-track"><div class="perf-fill pf1" data-w=".98"></div></div></div>
+        <div class="perf-row"><div class="perf-top"><span class="perf-lbl">Career Goal Achievement</span><span class="perf-pct f-num pc2">94%</span></div><div class="perf-track"><div class="perf-fill pf2" data-w=".94"></div></div></div>
+        <div class="perf-row"><div class="perf-top"><span class="perf-lbl">Financial Targets Reached</span><span class="perf-pct f-num pc3">92%</span></div><div class="perf-track"><div class="perf-fill pf3" data-w=".92"></div></div></div>
+        <div class="perf-row"><div class="perf-top"><span class="perf-lbl">Would Recommend Shape Uup</span><span class="perf-pct f-num pc4">97%</span></div><div class="perf-track"><div class="perf-fill pf4" data-w=".97"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS ← EDIT: quotes, names, roles, initials -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sr" style="margin-bottom:72px">
+      <div class="eyebrow eyebrow-bur">Client Voices</div>
+      <div class="rule rule-bur"></div>
+      <h2 class="f-head" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;letter-spacing:-.015em">What Our <em class="sh-tl" style="font-style:italic;font-weight:400">Clients Say</em></h2>
+    </div>
+    <div class="t-grid sg">
+      <!-- ← EDIT: testimonial 1 (amber accent) -->
+      <div class="tcard tc1">
+        <div class="tc-top"></div>
+        <div class="tc-stars"><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span></div>
+        <div class="tc-q">"</div>
+        <p class="tc-text">Utpaal ji's approach to financial planning is unlike anything I had encountered before. In six months, my business went from surviving to thriving. His insights are rare, his integrity absolute.</p>
+        <div class="tc-auth">
+          <div class="tc-av f-num">RK</div>
+          <div><div class="tc-name">Rajesh Kumar</div><div class="tc-role">Founder &amp; CEO, Kolkata</div></div>
+        </div>
+      </div>
+      <!-- ← EDIT: testimonial 2 (emerald accent) -->
+      <div class="tcard tc2">
+        <div class="tc-top"></div>
+        <div class="tc-stars"><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span></div>
+        <div class="tc-q">"</div>
+        <p class="tc-text">The career counselling I received from Shape Uup was the turning point of my professional life. Utpaal sir sees potential in you that you cannot see yourself — and then shows you exactly how to reach it.</p>
+        <div class="tc-auth">
+          <div class="tc-av f-num">PS</div>
+          <div><div class="tc-name">Priya Sharma</div><div class="tc-role">Director, Sharma Group, WB</div></div>
+        </div>
+      </div>
+      <!-- ← EDIT: testimonial 3 (teal accent) -->
+      <div class="tcard tc3">
+        <div class="tc-top"></div>
+        <div class="tc-stars"><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span><span class="tstar"></span></div>
+        <div class="tc-q">"</div>
+        <p class="tc-text">The executive training programme transformed my entire leadership team. The depth of knowledge, the personal attention, the practical precision — extraordinary. Shape Uup is in a class entirely its own.</p>
+        <div class="tc-auth">
+          <div class="tc-av f-num">AM</div>
+          <div><div class="tc-name">Amit Mondal</div><div class="tc-role">Managing Director, West Bengal</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- ← EDIT: Replace # with your Google Business URL -->
+    <div class="g-trust sr">
+      <div class="gs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <div class="gt"><strong>4.9 / 5.0 on Google Reviews</strong><span>Rated by 100+ verified clients across West Bengal</span></div>
+      <a href="#" target="_blank">View All Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG ← EDIT: tag, title, excerpt, date -->
+<section id="blog">
+  <div class="wrap">
+    <div class="blog-hd">
+      <div class="sr">
+        <div class="eyebrow eyebrow-em">Perspectives &amp; Insights</div>
+        <div class="rule rule-em"></div>
+        <h2 class="f-head" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;letter-spacing:-.015em;color:var(--tl-dark)">Latest <em style="font-style:italic;color:var(--em)">Articles</em></h2>
+      </div>
+      <a href="#blog" class="btn btn-ghost-em sr">All Articles <span class="btn-arr">→</span></a>
+    </div>
+    <div class="b-grid sg">
+      <div class="bcard bc1 sr">
+        <div class="bcard-tl"></div>
+        <div class="bcard-thumb">📊</div>
+        <div class="bcard-body">
+          <span class="bcard-tag">Finance</span>
+          <h3>Wealth Protection for Indian Entrepreneurs in a Volatile Market</h3>
+          <p>Five strategies that safeguard your hard-built wealth while positioning you for intelligent growth even in uncertain economic conditions.</p>
+          <div class="bcard-foot"><span class="bcard-date">June 10, 2025</span><a href="#" class="b-read">Read →</a></div>
+        </div>
+      </div>
+      <div class="bcard bc2 sr">
+        <div class="bcard-tl"></div>
+        <div class="bcard-thumb">🧭</div>
+        <div class="bcard-body">
+          <span class="bcard-tag">Career</span>
+          <h3>The Anatomy of a Successful Career Pivot at 40</h3>
+          <p>Why mid-career transitions are not setbacks — they are opportunities. How elite professionals navigate them without losing momentum.</p>
+          <div class="bcard-foot"><span class="bcard-date">May 28, 2025</span><a href="#" class="b-read">Read →</a></div>
+        </div>
+      </div>
+      <div class="bcard bc3 sr">
+        <div class="bcard-tl"></div>
+        <div class="bcard-thumb">🏛️</div>
+        <div class="bcard-body">
+          <span class="bcard-tag">Leadership</span>
+          <h3>Mental Fortitude — The Hidden Advantage of India's Best Entrepreneurs</h3>
+          <p>What separates truly successful entrepreneurs is rarely skill alone — it is the psychological resilience to persist and lead under pressure.</p>
+          <div class="bcard-foot"><span class="bcard-date">May 14, 2025</span><a href="#" class="b-read">Read →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING ← EDIT: bullet points, service options -->
+<section id="booking">
+  <div class="wrap book-grid">
+    <div class="sl">
+      <div class="eyebrow eyebrow-tl">Private Consultation</div>
+      <div class="rule rule-tl"></div>
+      <h2 class="f-head" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;letter-spacing:-.015em;margin-bottom:16px">Begin Your <em class="sh-amb" style="font-style:italic;font-weight:400">Journey.</em></h2>
+      <p style="font-family:var(--f-body);font-size:.98rem;font-style:italic;color:rgba(255,255,255,.55);line-height:1.9">Reserve a complimentary 30-minute private session. No pressure, no obligation — simply an honest conversation about your goals and how Shape Uup can help.</p>
+      <div class="bk-pts">
+        <div class="bkpt"><div class="bk-chk">✓</div><div><h5>Complimentary First Session</h5><p>The first 30-minute consultation is entirely free — our investment in understanding you.</p></div></div>
+        <div class="bkpt"><div class="bk-chk">✓</div><div><h5>Absolute Confidentiality</h5><p>Everything discussed remains strictly private. Your trust is our most valued asset.</p></div></div>
+        <div class="bkpt"><div class="bk-chk">✓</div><div><h5>Personalised Action Plan</h5><p>You leave every session with a clear, concrete roadmap — not vague advice.</p></div></div>
+        <div class="bkpt"><div class="bk-chk">✓</div><div><h5>Mon – Sat · 10 AM – 6 PM</h5><p>Available online and in-person across West Bengal.</p></div></div>
+      </div>
+      <a href="https://wa.me/919239251515" class="btn btn-amb btn-shine" target="_blank">↗ Book via WhatsApp</a>
+    </div>
+    <div class="fcard sr2">
+      <h3>Reserve Your Consultation</h3>
+      <form class="fg" onsubmit="handleBooking(event)">
+        <div class="ff"><label>First Name</label><input type="text" placeholder="First name" required/></div>
+        <div class="ff"><label>Last Name</label><input type="text" placeholder="Last name" required/></div>
+        <div class="ff"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 92392 51515" required/></div>
+        <div class="ff"><label>Email Address</label><input type="email" placeholder="your@email.com" required/></div>
+        <div class="ff full"><label>Service of Interest</label>
+          <select required>
+            <option value="">Select a discipline...</option>
+            <option>Finance &amp; Wealth Planning</option>
+            <option>Career Architecture</option>
+            <option>Private Counselling</option>
+            <option>Executive Training</option>
+            <option>Multiple Services</option>
+            <option>Need Guidance — Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="ff full"><label>Preferred Date &amp; Time</label><input type="datetime-local"/></div>
+        <div class="ff full"><label>Your Objective (Optional)</label><textarea placeholder="Briefly describe your goal or challenge..."></textarea></div>
+        <div class="full">
+          <button type="submit" class="btn btn-em btn-shine" style="width:100%;justify-content:center;padding:18px;font-size:.8rem">
+            Confirm Private Consultation <span class="btn-arr">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER (emerald bg) ← EDIT: headline, description -->
+<div class="nl-band">
+  <div class="nl-inner sr">
+    <span class="nl-eyebrow">Exclusive Intelligence Briefing</span>
+    <h2 class="nl-title f-head">The Shape Uup <em>Briefing</em></h2>
+    <p class="nl-sub">Join a curated community of entrepreneurs and business leaders who receive our private weekly briefing on financial strategy, career intelligence, and leadership insights.</p>
+    <form class="nl-form" onsubmit="handleNl(event)">
+      <input type="email" placeholder="Your email address..." required/>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="nl-disc">Curated · Zero spam · Unsubscribe anytime</p>
+  </div>
+</div>
+
+<!-- CONTACT ← EDIT: contact details, social URLs -->
+<section id="contact">
+  <div class="wrap con-grid">
+    <div class="sl">
+      <div class="eyebrow eyebrow-amb">Get In Touch</div>
+      <div class="rule rule-amb"></div>
+      <h2 class="f-head" style="font-size:clamp(2rem,3.5vw,3.4rem);font-weight:700;letter-spacing:-.015em;color:var(--tl-dark);margin-bottom:20px">Let Us <em style="font-style:italic;color:var(--em)">Connect.</em></h2>
+      <p style="font-family:var(--f-body);font-size:.97rem;font-style:italic;color:var(--tl-mid);line-height:1.9;margin-bottom:36px">Every message is read personally by Utpaal Kumaar Maaiti. Expect a thoughtful response within one business day.</p>
+      <div class="ci-row"><div class="ci-ico">📞</div><div><h4>Phone &amp; WhatsApp</h4><a href="tel:+919239251515">+91 92392 51515</a></div></div>
+      <div class="ci-row"><div class="ci-ico">✉️</div><div><h4>Email Address</h4><a href="mailto:maiti.uk@yahoo.com">maiti.uk@yahoo.com</a></div></div>
+      <div class="ci-row"><div class="ci-ico">📍</div><div><h4>Location</h4><p>West Bengal, India</p></div></div>
+      <div class="ci-row"><div class="ci-ico">🕐</div><div><h4>Office Hours</h4><p>Monday – Saturday · 10:00 AM – 6:00 PM</p></div></div>
+      <div class="socials">
+        <a href="https://wa.me/919239251515" class="soc soc-wa" target="_blank" title="WhatsApp">💬</a>
+        <a href="#" class="soc soc-li" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="cform sr2">
+      <h3>Send a Message</h3>
+      <form class="fg" onsubmit="handleContact(event)">
+        <div class="ff"><label>Your Name</label><input type="text" placeholder="Full name" required/></div>
+        <div class="ff"><label>Phone</label><input type="tel" placeholder="+91 92392 51515"/></div>
+        <div class="ff full"><label>Email</label><input type="email" placeholder="your@email.com" required/></div>
+        <div class="ff full"><label>Subject</label><input type="text" placeholder="How may I assist you?"/></div>
+        <div class="ff full"><label>Message</label><textarea placeholder="Write your message here..."></textarea></div>
+        <div class="full">
+          <button type="submit" class="btn btn-amb btn-shine" style="width:100%;justify-content:center;padding:18px;font-size:.8rem">
+            Send Message <span class="btn-arr">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER ← EDIT: links, copyright -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-brand-row">
+          <img src="1000257944.jpg" alt="Shape Uup"/>
+          <span class="ft-name f-head">Shape Uup</span>
+        </div>
+        <div class="ft-rule"></div>
+        <p class="ft-body">Finance · Career · Counselling · Training<br><br>Empowering Business Owners &amp; Entrepreneurs across West Bengal to grow, plan &amp; succeed — since 2015.</p>
+      </div>
+      <div class="fc">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Finance Planning</a></li>
+          <li><a href="#services">Career Guidance</a></li>
+          <li><a href="#services">Counselling</a></li>
+          <li><a href="#services">Training Programs</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#blog">Insights</a></li>
+          <li><a href="#booking">Book Session</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h5>Reach Us</h5>
+        <ul>
+          <li><a href="tel:+919239251515">+91 92392 51515</a></li>
+          <li><a href="mailto:maiti.uk@yahoo.com">maiti.uk@yahoo.com</a></li>
+          <li><a href="https://wa.me/919239251515" target="_blank">WhatsApp</a></li>
+          <li><a href="#" target="_blank">LinkedIn</a></li>
+          <li style="margin-top:8px;font-size:.64rem;color:rgba(74,96,112,.35);letter-spacing:.08em;font-family:var(--f-ui)">Mon–Sat · 10AM–6PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-base">
+      <p>© 2025 Shape Uup — Utpaal Kumaar Maaiti. All rights reserved.</p>
+      <span class="ft-sig">West Bengal, India</span>
+      <div style="display:flex;gap:22px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+/* ── Custom cursor with lag ── */
+const cDot=document.getElementById('cDot'),cRing=document.getElementById('cRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cDot.style.left=mx+'px';cDot.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cRing.style.left=rx+'px';cRing.style.top=ry+'px';requestAnimationFrame(animRing);})();
+document.querySelectorAll('a,button,.svc,.tcard,.bcard,.pstep,.hpill,.chip').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cDot.classList.add('big');cRing.classList.add('big');});
+  el.addEventListener('mouseleave',()=>{cDot.classList.remove('big');cRing.classList.remove('big');});
+});
+
+/* ── Nav scroll + active link ── */
+const nav=document.getElementById('nav');
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>60);
+  let cur='';
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-140)cur=s.id;});
+  document.querySelectorAll('.n-links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+/* ── Mobile menu ── */
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+function closeMob(){ham.classList.remove('open');mob.classList.remove('open');}
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+
+/* ── Particles (multi-color) ── */
+const ptC=document.getElementById('particles');
+const ptColors=['var(--amb2)','var(--em3)','var(--tl3)','var(--bur3)','var(--amb-lt)'];
+for(let i=0;i<26;i++){
+  const p=document.createElement('div');
+  const s=2+Math.random()*4;
+  const x=10+Math.random()*80;
+  const dur=4+Math.random()*8;
+  const del=Math.random()*9;
+  const col=ptColors[Math.floor(Math.random()*ptColors.length)];
+  const anim=Math.random()>.5?'ptFloat':'ptFloatB';
+  p.style.cssText=`position:absolute;bottom:0;left:${x}%;width:${s}px;height:${s}px;border-radius:50%;background:${col};opacity:0;animation:${anim} ${dur}s ${del}s linear infinite;pointer-events:none;`;
+  ptC.appendChild(p);
+}
+
+/* ── Scroll reveal ── */
+const ropts={threshold:.1,rootMargin:'0px 0px -40px 0px'};
+const robs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');robs.unobserve(e.target);}});},ropts);
+document.querySelectorAll('.sr,.sl,.sr2,.sc').forEach(el=>robs.observe(el));
+
+/* ── Hero stat bars animate on visible ── */
+const barObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.hst-fill').forEach(f=>{setTimeout(()=>f.classList.add('go'),500);});barObs.unobserve(e.target);}});
+},{threshold:.35});
+const hs=document.querySelector('.h-stats');
+if(hs)barObs.observe(hs);
+
+/* ── Performance bar fills ── */
+const perfObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.perf-fill').forEach(f=>{setTimeout(()=>{f.style.transform=`scaleX(${f.dataset.w})`;},300);});perfObs.unobserve(e.target);}});
+},{threshold:.3});
+document.querySelectorAll('.perf-box').forEach(b=>perfObs.observe(b));
+
+/* ── Counter animation (Cormorant Garamond feel) ── */
+function animCount(el,target){
+  let v=0;const inc=target/55;
+  const t=setInterval(()=>{v=Math.min(v+inc,target);el.textContent=Math.floor(v);if(v>=target){el.textContent=target;clearInterval(t);}},26);
+}
+const ctrObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.ctr').forEach(el=>animCount(el,+el.dataset.target));ctrObs.unobserve(e.target);}});
+},{threshold:.4});
+document.querySelectorAll('.stat-band').forEach(b=>ctrObs.observe(b));
+
+/* ── Process step hover color sync ── */
+document.querySelectorAll('.pstep').forEach(s=>{
+  s.addEventListener('mouseenter',()=>s.style.paddingLeft='8px');
+  s.addEventListener('mouseleave',()=>s.style.paddingLeft='0px');
+});
+
+/* ── Form success handlers ── */
+function showOK(btn,msg){
+  const orig=btn.innerHTML;
+  btn.innerHTML='✓ '+msg;
+  btn.style.background='var(--em)';
+  btn.disabled=true;
+  setTimeout(()=>{btn.innerHTML=orig;btn.style.background='';btn.disabled=false;},5500);
+}
+function handleBooking(e){e.preventDefault();showOK(e.target.querySelector('[type="submit"]'),"Consultation Reserved — We'll Contact You Shortly");e.target.reset();}
+function handleContact(e){e.preventDefault();showOK(e.target.querySelector('[type="submit"]'),"Message Received — Reply Within 24 Hours");e.target.reset();}
+function handleNl(e){e.preventDefault();const b=e.target.querySelector('button');b.textContent='✓ Subscribed!';b.style.background='var(--em)';setTimeout(()=>{b.textContent='Subscribe';b.style.background='';e.target.reset();},4500);}
+</script>
+</body>
+</html>
